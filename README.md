@@ -11,7 +11,7 @@ HEAVILY borrowed from [the Red Hat Canadia team's repo](https://github.com/redha
 To install argocd using the operator, use this repo.
 
 ```
-until oc apply -k https://github.com/christianh814/openshift-cluster-config/argocd/install; do sleep 2; done
+until oc apply -k https://github.com/welshstew/openshift-cluster-config/argocd/install; do sleep 2; done
 ```
 
 This will start the installation of argocd. You can monitor the install with a `watch` on the following command.
@@ -31,7 +31,7 @@ oc get route argocd-server -n argocd -o jsonpath='{.spec.host}{"\n"}'
 To configure your cluster to this repo run
 
 ```
-oc apply -k https://github.com/christianh814/openshift-cluster-config/cluster-config/config/overlays/default
+oc apply -k https://github.com/welshstew/openshift-cluster-config/cluster-config/config/overlays/default
 ```
 
 This will configure your server with the following.
@@ -56,7 +56,7 @@ Application Deployments:
   * One `application` running the frontend
   * Another `application` running the database
   * The 3rd `application` just creates the namespace called `pricelist`
-  * The manifests for this app lives in my [gitops example repo](https://github.com/christianh814/gitops-examples)
+  * The manifests for this app lives in my [gitops example repo](https://github.com/welshstew/gitops-examples)
 
 ArgoCD Configurations
 * ArgoCD is integrated with the OpenShift oAuth
@@ -66,7 +66,7 @@ ArgoCD Configurations
   * ArgoCD admins can see and sync all ArgoCD Applications
 * The `cluster-config` ArgoCD project has all "cluster wide" configurations
   * Can only be seen/synced by ArgoCD admins
-* The `pricelist` ArgoCD project has all appliaction components to run the [Pricelist](https://github.com/christianh814/openshift-cluster-config) application
+* The `pricelist` ArgoCD project has all appliaction components to run the [Pricelist](https://github.com/welshstew/openshift-cluster-config) application
   * Can be seen/synced by ArgoCD admins or ArgoCD users
 * Autosync is turned on
 
