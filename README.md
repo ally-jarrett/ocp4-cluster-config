@@ -39,10 +39,10 @@ This will configure your server with the following.
 HTPasswd:
 
 ```
-htpasswd -c ./cluster.htpasswd admin
-htpasswd ./cluster.htpasswd ocp-admin
-htpasswd ./cluster.htpasswd ocp-developer
-htpasswd ./cluster.htpasswd ocp-marketing
+htpasswd -c -B -b ./users.htpasswd admin admin
+htpasswd -Bb ./users.htpasswd ocp-admin admin
+htpasswd -Bb ./users.htpasswd ocp-developer developer
+htpasswd -Bb ./users.htpasswd ocp-marketing marketing
 ```
 
 Cluster Configurations:
