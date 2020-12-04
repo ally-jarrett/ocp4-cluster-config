@@ -40,9 +40,20 @@ HTPasswd:
 
 ```
 htpasswd -c -B -b ./users.htpasswd admin admin
-htpasswd -Bb ./users.htpasswd ocp-admin admin
-htpasswd -Bb ./users.htpasswd ocp-developer developer
-htpasswd -Bb ./users.htpasswd ocp-marketing marketing
+htpasswd -b ./users.htpasswd ocp-admin admin
+htpasswd -b ./users.htpasswd ocp-developer developer
+htpasswd -b ./users.htpasswd ocp-marketing marketing
+```
+
+after
+
+```
+oc adm policy add-cluster-role-to-user admin admin
+oc adm policy add-cluster-role-to-user admin ocp-admin
+oc adm policy add-cluster-role-to-user edit developer
+oc adm policy add-cluster-role-to-user view marketing
+
+
 ```
 
 Cluster Configurations:
