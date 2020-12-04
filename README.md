@@ -36,12 +36,21 @@ oc apply -k https://github.com/welshstew/openshift-cluster-config/cluster-config
 
 This will configure your server with the following.
 
+HTPasswd:
+
+```
+htpasswd -c ./cluster.htpasswd admin
+htpasswd ./cluster.htpasswd ocp-admin
+htpasswd ./cluster.htpasswd ocp-developer
+htpasswd ./cluster.htpasswd ocp-marketing
+```
+
 Cluster Configurations:
 * HTPassword Authentication
-  * Three users: `ocp-admin`,`ocp-developer`, and `ocp-marketing`
+  * Four users: `admin`, `ocp-admin`,`ocp-developer`, and `ocp-marketing`
 * Three Groups created
   * `admins`
-    * `ocp-admin` is part of `admins`
+    * `ocp-admin` and `admin` is part of `admins`
   * `developer`
     * `ocp-developer` is part of `developer`
   * `marketing`

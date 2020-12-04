@@ -4,3 +4,4 @@ metadata:
   name: admins
 users:
   - ocp-admin
+  - admin
