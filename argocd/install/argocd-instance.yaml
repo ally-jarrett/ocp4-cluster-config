@@ -20,7 +20,8 @@ spec:
     defaultPolicy: ''
     policy: |
       g, system:cluster-admins, role:admin
-      g, admins, role:admin
+      g, admins, role:admin,
+      g, admin, role:admin
       g, developer, role:developer
       g, marketing, role:marketing
     scopes: '[groups]'
