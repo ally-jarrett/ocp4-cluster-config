@@ -8,3 +8,6 @@ resources:
 - pricelist-frontend.yaml
 - pricelist-db.yaml
 - pricelist-namespace.yaml
+- nodejs-frontend.yaml
+- nodejs-db.yaml
+- nodejs-namespace.yaml

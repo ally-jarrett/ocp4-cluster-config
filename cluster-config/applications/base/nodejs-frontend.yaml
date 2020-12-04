@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: pricelist-db-app
+  name: nodejs-frontend-app
 spec:
   destination:
-    namespace: pricelist
+    namespace: nodejs
     server: https://kubernetes.default.svc
-  project: pricelist
+  project: nodejs
   source:
-    path: pricelist/database
+    path: nodejs-persistent/frontend
     repoURL: https://github.com/welshstew/gitops-examples
     targetRevision: master
   syncPolicy:
@@ -18,9 +18,9 @@ spec:
   sync:
     comparedTo:
       destination:
-        namespace: pricelist
+        namespace: nodejs
         server: https://kubernetes.default.svc
       source:
-        path: pricelist/database
+        path: nodejs-persistent/frontend
         repoURL: https://github.com/welshstew/gitops-examples
         targetRevision: master

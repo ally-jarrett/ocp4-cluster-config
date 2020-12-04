@@ -27,7 +27,7 @@ spec:
   initialRepositories: |
     - name: cluster-config
       type: git
-      url: https://github.com/christianh814/openshift-cluster-config
+      url: https://github.com/welshstew/openshift-cluster-config
     - name: examples
       type: git
-      url: https://github.com/christianh814/gitops-examples
+      url: https://github.com/welshstew/gitops-examples
