@@ -5,9 +5,6 @@ resources:
 - htpass-auth.yaml
 - rbac.yaml
 - container-security-operator.yaml
-- pricelist-frontend.yaml
-- pricelist-db.yaml
-- pricelist-namespace.yaml
 - nodejs-frontend.yaml
 - nodejs-db.yaml
 - nodejs-namespace.yaml
