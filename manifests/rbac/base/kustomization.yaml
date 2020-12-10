@@ -6,4 +6,4 @@ resources:
 - cluster-role-binding.yaml
 - developer-group.yaml
 - marketing-group.yaml
-- project-role-binding-pricelist.yaml
+- project-role-binding-nodejs.yaml
