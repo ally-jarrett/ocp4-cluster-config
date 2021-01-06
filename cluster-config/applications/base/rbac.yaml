@@ -9,7 +9,7 @@ spec:
   project: cluster-config
   source:
     path: manifests/rbac/base
-    repoURL: https://github.com/welshstew/openshift-cluster-config
+    repoURL: https://github.com/Purple-Sky-Pirates/bd35-cluster-config
     targetRevision: master
   syncPolicy:
     automated:
@@ -22,5 +22,5 @@ spec:
         server: https://kubernetes.default.svc
       source:
         path: manifests/rbac/base
-        repoURL: https://github.com/welshstew/openshift-cluster-config
+        repoURL: https://github.com/Purple-Sky-Pirates/bd35-cluster-config
         targetRevision: master
