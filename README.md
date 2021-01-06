@@ -11,7 +11,7 @@ HEAVILY borrowed from [the Red Hat Canadia team's repo](https://github.com/redha
 To install argocd using the operator, use this repo.
 
 ```
-until oc apply -k https://github.com/welshstew/openshift-cluster-config/argocd/install; do sleep 2; done
+until oc apply -k https://github.com/Purple-Sky-Pirates/bd35-cluster-config/argocd/install; do sleep 2; done
 ```
 
 This will start the installation of argocd. You can monitor the install with a `watch` on the following command.
@@ -31,7 +31,7 @@ oc get route argocd-server -n argocd -o jsonpath='{.spec.host}{"\n"}'
 To configure your cluster to this repo run
 
 ```
-oc apply -k https://github.com/welshstew/openshift-cluster-config/cluster-config/config/overlays/default
+oc apply -k https://github.com/Purple-Sky-Pirates/bd35-cluster-config/cluster-config/config/overlays/default
 ```
 
 This will configure your server with the following.
