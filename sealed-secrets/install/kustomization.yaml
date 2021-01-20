@@ -1,0 +1,6 @@
+bases:
+- ../base
+
+resources:
+- sealed-secret-cluster-role.yaml
+- sealed-secret-instance.yaml

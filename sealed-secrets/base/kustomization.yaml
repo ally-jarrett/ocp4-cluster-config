@@ -1,0 +1,5 @@
+resources:
+- namespace.yaml
+- catalog-source.yaml
+- operator-group.yaml
+- subscription.yaml
