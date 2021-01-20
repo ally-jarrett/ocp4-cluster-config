@@ -28,7 +28,7 @@ spec:
   initialRepositories: |
     - name: cluster-config
       type: git
-      url: https://github.com/Purple-Sky-Pirates/bd35-cluster-config
+      url: https://github.com/ally-jarrett/ocp4-cluster-config
     - name: examples
       type: git
       url: https://github.com/welshstew/gitops-examples
