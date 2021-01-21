@@ -1,0 +1,25 @@
+##############
+# 🐙 Argo Sync Policy
+#############
+sync_policy_true: &sync_policy_true
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - Validate=true
+
+##############
+# 🛎 Argo App of Apps. Points to a repo which contains some helm stuff
+#############
+
+applications:
+  - name: devops-tooling
+    destination: demo-ci-cd
+    enabled: true
+    source: https://github.com/rht-labs/ubiquitous-journey.git
+    source_path: devops-tooling/
+    source_ref: argo-sandpit
+    sync_policy: *sync_policy_true
+    helm_values:
+      - values-tooling.yaml
