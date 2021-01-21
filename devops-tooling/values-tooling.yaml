@@ -60,7 +60,6 @@ applications:
           username: token
           password: aaa.bbb.ccc
       imagestreams:
-        - name: *name
         - name: jenkins-agent-mvn
         - name: jenkins-agent-npm
     ignore_differences:
