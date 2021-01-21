@@ -17,7 +17,7 @@ applications:
   - name: devops-tooling
     destination: demo-ci-cd
     enabled: true
-    source: https://github.com/rht-labs/ubiquitous-journey.git
+    source: https://github.com/ally-jarrett/ocp4-cluster-config.git
     source_path: devops-tooling/
     source_ref: argo-sandpit
     sync_policy: *sync_policy_true
