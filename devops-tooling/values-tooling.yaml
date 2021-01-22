@@ -1,3 +1,4 @@
+# Reusable Vars
 destination: &ci_cd_ns demo-ci-cd
 
 ##############
@@ -60,6 +61,7 @@ applications:
           username: token
           password: aaa.bbb.ccc
       imagestreams:
+        - name: jenkins
         - name: jenkins-agent-mvn
         - name: jenkins-agent-npm
     ignore_differences:
@@ -82,6 +84,9 @@ applications:
     destination: *ci_cd_ns
     values:
       initContainers: true
+      postgresql:
+        image:
+          tag: "9.6"
       plugins:
         install:
           - https://github.com/checkstyle/sonar-checkstyle/releases/download/8.35/checkstyle-sonar-plugin-8.38.jar
